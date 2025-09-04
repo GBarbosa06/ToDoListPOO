@@ -30,12 +30,24 @@ public class TarefaServico {
         return tarefa;
     }
 
-    public List<Tarefa> listarTarefas(){
-
+        
+    public List<Tarefa> visualizarTarefa() {
+        return new ArrayList<>(tarefas);
     }
 
-    public Tarefa atualizarTarefa(Tarefa tarefa){
-
+     public void atualizarTarefa(int id, String novoTitulo, String novaDescricao, boolean novaCompleta) {
+            for (Tarefa tarefa : tarefas) {
+                if (tarefa.getId() == id) { 
+                    if (novoTitulo != null){
+                        tarefa.setTitulo(novoTitulo);
+                    }
+                    if (novaDescricao != null) {
+                        tarefa.setDescricao(novaDescricao);
+                    }
+                    tarefa.setCompleta(novaCompleta);
+                    break; 
+                }
+            }
     }
 
     public void removerTarefa(){
