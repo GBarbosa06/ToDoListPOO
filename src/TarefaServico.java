@@ -1,4 +1,3 @@
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +6,12 @@ public class TarefaServico {
     private int contadorID = 1;
 
     // 4 métodos por causa dos construtores recursivos na classe Tarefa
+    public Tarefa criarTarefa() {
+        Tarefa tarefa = new Tarefa(contadorID++);
+        tarefas.add(tarefa);
+        return tarefa;
+    }
+
     public Tarefa criarTarefa(String titulo) {
         Tarefa tarefa = new Tarefa(contadorID++, titulo);
         tarefas.add(tarefa);
@@ -21,12 +26,6 @@ public class TarefaServico {
 
     public Tarefa criarTarefa(String titulo, String descricao, boolean completa) {
         Tarefa tarefa = new Tarefa(contadorID++, titulo, descricao, completa);
-        tarefas.add(tarefa);
-        return tarefa;
-    }
-
-    public Tarefa criarTarefa(String titulo, String descricao, boolean completa, LocalDateTime dataAgora) {
-        Tarefa tarefa = new Tarefa(contadorID++, titulo, descricao, completa, dataAgora);
         tarefas.add(tarefa);
         return tarefa;
     }
