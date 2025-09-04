@@ -69,4 +69,24 @@ public class Tarefa {
     public void setCompleta(boolean completa) {
         this.completa = completa;
     }
+    
+    public String visualizarTarefa() {
+        String status = completa ? "Completa": "Pendente";
+        return "ID: " + id + "\n" +
+               "Título: " + titulo + "\n" +
+               "Descrição: " + (descricao != null ? descricao: "Sem descrição") + "\n" +
+               "Status: " + status + "\n" +
+               "Data de criação: " + dataAgora.toString();
+    }
+
+    public void editarTarefa(String novoTitulo, String novaDescricao, boolean NovaCompleta) {
+        if (novoTitulo != null && !novoTitulo.trim().isEmpty()) {
+            this.titulo = novoTitulo;
+        }
+        if (novaDescricao != null) {
+            this.descricao = novaDescricao;
+        }
+        this.completa = NovaCompleta;
+    }
+
 }
