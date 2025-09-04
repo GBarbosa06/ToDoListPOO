@@ -8,24 +8,27 @@ public class Tarefa {
     private LocalDateTime dataAgora;
 
     // Construtores (recursivos, não está na descrição da atividade, mas foi solicitado na aula)
-    public Tarefa(){
-        this("Sem título");
-    }
 
-    public Tarefa(String titulo){
+    public Tarefa(int id, String titulo) {
+        this.id = id;
         this.titulo = titulo;
         this.dataAgora = LocalDateTime.now();
-        this.completa = false;
+        this.completa = false; // padrão
     }
 
-    public Tarefa(String titulo, String descricao) {
-        this(titulo);
+    public Tarefa(int id, String titulo, String descricao) {
+        this(id, titulo);
         this.descricao = descricao;
     }
 
-    public Tarefa(String titulo, String descricao, boolean completa) {
-        this(titulo, descricao);
+    public Tarefa(int id, String titulo, String descricao, boolean completa) {
+        this(id, titulo, descricao);
         this.completa = completa;
+    }
+
+    public Tarefa(int id, String titulo, String descricao, boolean completa, LocalDateTime dataAgora) {
+        this(id, titulo, descricao, completa);
+        this.dataAgora = dataAgora;
     }
 
     // Getters e Setters
