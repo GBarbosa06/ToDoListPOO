@@ -1,4 +1,6 @@
-package main.java.ucb.grupo3;
+package ucb.grupo3.service;
+
+import ucb.grupo3.model.Tarefa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,7 @@ public class TarefaServico {
     private List<Tarefa> tarefas = new ArrayList<>();
     private int contadorID = 1;
 
-    // 4 métodos por causa dos construtores recursivos na classe main.java.ucb.grupo3.Tarefa
+    // 4 métodos por causa dos construtores recursivos na classe main.java.ucb.grupo3.model.Tarefa
     public Tarefa criarTarefa() {
         Tarefa tarefa = new Tarefa(contadorID++);
         tarefas.add(tarefa);

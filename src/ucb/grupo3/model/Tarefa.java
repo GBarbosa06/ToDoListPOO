@@ -1,4 +1,4 @@
-package main.java.ucb.grupo3;
+package ucb.grupo3.model;
 
 import java.time.LocalDateTime;
 
