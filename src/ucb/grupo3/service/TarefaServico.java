@@ -11,11 +11,15 @@ public class TarefaServico {
 
     // 4 métodos por causa dos construtores recursivos na classe main.java.ucb.grupo3.model.Tarefa
 
-    public Tarefa criarTarefa(String titulo) {
-        Tarefa tarefa = new Tarefa(contadorID++, titulo);
-        tarefas.add(tarefa);
-        return tarefa;
+    public Tarefa buscarTarefa(int IdBuscado) {
+         for (Tarefa tarefa: tarefas){
+             if(tarefa.getId() == idBuscado) {
+                 return tarefa;
+             }
+         }
+        return null;
     }
+
 
     public Tarefa criarTarefa(String titulo, String descricao) {
         Tarefa tarefa = new Tarefa(contadorID++, titulo, descricao);
