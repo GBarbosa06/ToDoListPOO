@@ -21,8 +21,8 @@ public class TarefaServico {
     }
 
 
-    public Tarefa criarTarefa(String titulo, String descricao) {
-        Tarefa tarefa = new Tarefa(contadorID++, titulo, descricao);
+    public Tarefa criarTarefa(String titulo, String descricao, boolean completa) {
+        Tarefa tarefa = new Tarefa(contadorID++, titulo, descricao, completa);
         tarefas.add(tarefa);
         return tarefa;
     }
