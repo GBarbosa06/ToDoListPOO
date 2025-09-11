@@ -52,8 +52,8 @@ public class TarefaServico {
                 tarefa.setCompleta(completa);
             }
             break;
-        }
-    }
+        }
+    }
 }
 
     // Remover tarefa
