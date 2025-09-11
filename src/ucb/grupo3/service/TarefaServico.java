@@ -13,7 +13,7 @@ public class TarefaServico {
 
     public Tarefa buscarTarefa(int IdBuscado) {
          for (Tarefa tarefa: tarefas){
-             if(tarefa.getId() == idBuscado) {
+             if(tarefa.getId() == IdBuscado) {
                  return tarefa;
              }
          }
