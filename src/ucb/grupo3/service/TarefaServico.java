@@ -8,16 +8,34 @@ public class TarefaServico {
     private int contadorID = 1;
 
     // Criar tarefa
+    // 4 métodos por causa dos construtores recursivos na classe main.java.ucb.grupo3.model.Tarefa
+    public Tarefa criarTarefa() {
+        Tarefa tarefa = new Tarefa(contadorID++);
+        tarefas.add(tarefa);
+        return tarefa;
+    }
+
+    public Tarefa criarTarefa(String titulo) {
+        Tarefa tarefa = new Tarefa(contadorID++, titulo);
+        tarefas.add(tarefa);
+        return tarefa;
+    }
+
     public Tarefa criarTarefa(String titulo, String descricao) {
-        Tarefa tarefa = new Tarefa(contadorID, titulo, descricao, false);
-        contadorID++;
+        Tarefa tarefa = new Tarefa(contadorID++, titulo, descricao);
+        tarefas.add(tarefa);
+        return tarefa;
+    }
+
+    public Tarefa criarTarefa(String titulo, String descricao, boolean completa) {
+        Tarefa tarefa = new Tarefa(contadorID++, titulo, descricao, completa);
         tarefas.add(tarefa);
         return tarefa;
     }
 
     // Visualizar tarefas
     public ArrayList<Tarefa> visualizarTarefas() {
-        return tarefas;
+        return new ArrayList<>(tarefas);
     }
 
     // Atualizar tarefa
