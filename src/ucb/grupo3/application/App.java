@@ -25,7 +25,7 @@ public class App {
             System.out.print("Escolha uma opção: ");
 
             int opcao = sc.nextInt();
-            sc.nextLine(); // consumir quebra de linha
+            sc.nextLine();
 
             switch (opcao) {
                 case 1 -> {
@@ -103,11 +103,11 @@ public class App {
             System.out.println("Nenhuma tarefa encontrada.");
         } else {
             for (Tarefa t : tarefas) {
-                String completa = t.isCompleta() ? "Sim" : "Não";
+                String tCompleta = t.isCompleta() ? "Sim" : "Não";
                 System.out.println("ID: " + t.getId() +
                         " | Título: " + t.getTitulo() +
                         " | Descrição: " + t.getDescricao() +
-                        " | Concluída: " + completa +
+                        " | Concluída: " + tCompleta +
                         " | Criada em: " + t.getDataAgora());
             }
         }
