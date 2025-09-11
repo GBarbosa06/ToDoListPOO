@@ -71,25 +71,25 @@ public class App {
                     }
 
                     servico.atualizarTarefa(id, titulo, descricao, completa);
-                    System.out.println("✏️ Tarefa atualizada (se encontrada).");
+                    System.out.println("arefa atualizada (se encontrada).");
                 }
                 case 6 -> {
                     System.out.print("ID da tarefa: ");
                     int id = sc.nextInt();
                     sc.nextLine();
                     servico.marcarTarefa(id);
-                    System.out.println("🏁 Tarefa marcada como concluída.");
+                    System.out.println("Tarefa marcada como concluída.");
                 }
                 case 7 -> {
                     System.out.print("ID da tarefa: ");
                     int id = sc.nextInt();
                     sc.nextLine();
                     servico.removerTarefa(id);
-                    System.out.println("🗑️ Tarefa removida (se encontrada).");
+                    System.out.println("Tarefa removida (se encontrada).");
                 }
                 case 0 -> {
                     rodando = false;
-                    System.out.println("👋 Saindo do sistema...");
+                    System.out.println("Saindo do sistema...");
                 }
                 default -> System.out.println("Opção inválida!");
             }
@@ -113,7 +113,3 @@ public class App {
         }
     }
 }
-
-/*
-    Colocar a opção de ver as tarefas pendentes e concluídas
- */
