@@ -39,15 +39,22 @@ public class TarefaServico {
     }
 
     // Atualizar tarefa
-    public void atualizarTarefa(int id, String novoTitulo, String novaDescricao, boolean completa) {
-        for (Tarefa tarefa : tarefas) {
-            if (tarefa.getId() == id) {
+    public void atualizarTarefa(int id, String novoTitulo, String novaDescricao, Boolean completa) {
+    for (Tarefa tarefa : tarefas) {
+        if (tarefa.getId() == id) {
+            if (novoTitulo != null) {
                 tarefa.setTitulo(novoTitulo);
+            }
+            if (novaDescricao != null) {
                 tarefa.setDescricao(novaDescricao);
+            }
+            if (completa != null) { 
                 tarefa.setCompleta(completa);
             }
-        }
-    }
+            break;
+        }
+    }
+}
 
     // Remover tarefa
     public void removerTarefa(int id) {
